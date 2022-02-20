@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html,
 body {
     margin: 0;
@@ -5,36 +7,55 @@ body {
 }
 
 body {
-    background-color: #f1dfd1;
-    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+    font-family: 'Lato', sans-serif;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-.container {
+header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
 
     .title {
+        margin-top: 50px;
+        text-align: center;
+
         img {
-            width: 300px;
+            width: 250px;
+        }
+
+        p {
+            margin: 40px 20px;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 4px;
+            background: black;
+            padding: 2px;
         }
     }
+}
 
-    .social {
+footer {
+    position: fixed;
+    bottom: 50px;
+
+    .socials {
         display: flex;
-        align-items: center;
         justify-content: center;
+        width: 100vw;
 
-        a {
-            font-size: 40px;
-            margin: 0 20px;
-            text-decoration: none;
-            transition: transform 0.3s;
+        .social {
+            img {
+                width: 60px;
+                margin: 0 2vw;
+                transition: transform .3s;
 
-            &:hover {
-                transform: scale(1.2);
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
         }
     }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 html,
 body {
   margin: 0;
@@ -5,11 +6,14 @@ body {
 }
 
 body {
-  background-color: #f1dfd1;
-  background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+  font-family: 'Lato', sans-serif;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
-.container {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,37 +23,51 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+}
+
+header .title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+header .title img {
+  width: 250px;
+}
+
+header .title p {
+  margin: 40px 20px;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 4px;
+  background: black;
+  padding: 2px;
+}
+
+footer {
+  position: fixed;
+  bottom: 50px;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100vw;
 }
 
-.container .title img {
-  width: 300px;
+footer .socials .social img {
+  width: 60px;
+  margin: 0 2vw;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
-.container .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.container .social a {
-  font-size: 40px;
-  margin: 0 20px;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.container .social a:hover {
+footer .socials .social img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
