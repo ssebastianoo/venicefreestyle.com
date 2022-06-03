@@ -16,10 +16,6 @@ export default function Grid({ items }) {
         }
     });
 
-    console.log(gridItems);
-    console.log('----')
-    console.log(tempGrid);
-
     if (
         (tempGrid.length > 0 && tempGrid.length < gridMaxItems) ||
         tempGrid.length == gridMaxItems
