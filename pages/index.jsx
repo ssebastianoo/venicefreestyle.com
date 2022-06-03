@@ -1,7 +1,19 @@
 import Grid from "../components/Grid";
 import Head from "next/head";
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+    const [projects, setProjects] = useState([]);
+
+    async function getProjects() {
+        const querySnapshot = await getDocs(collection(db, "projects"));
+        const projects = querySnapshot.docs.map((doc) => doc.data());
+        setProjects(projects);
+    }
+    useEffect(() => getProjects, []);
+
     const items = [
         {
             title: "Urban Bootcamp by Tau Marin",
@@ -167,19 +179,19 @@ export default function Home() {
             title: "VFL @ IUAV",
             content:
                 "Partner: Istituto Università di Architettura _ Porto di Venezia _ Comune di Venezia\nTag: #parkour #Bmx #Skate #university",
-                background: "https://i.ytimg.com/vi/2N1KNkeeArA/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAA49tdBCMX058OaKHQ6pSZmZ8xsA",
-                links: [
+            background:
+                "https://i.ytimg.com/vi/2N1KNkeeArA/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAA49tdBCMX058OaKHQ6pSZmZ8xsA",
+            links: [
                 {
                     label: "Parkour",
-                    url: "https://www.youtube.com/watch?v=oGuiMq6J-ZE"
+                    url: "https://www.youtube.com/watch?v=oGuiMq6J-ZE",
                 },
                 {
                     label: "BMX",
-                    url: "https://www.youtube.com/watch?v=2N1KNkeeArA"
-                }
+                    url: "https://www.youtube.com/watch?v=2N1KNkeeArA",
+                },
             ],
         },
-        
     ];
 
     return (
@@ -187,7 +199,7 @@ export default function Home() {
             <Head>
                 <title>VFL</title>
             </Head>
-            <Grid items={items} />
+            <Grid items={projects} />
         </div>
     );
 }
