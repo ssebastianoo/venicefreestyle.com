@@ -1,14 +1,22 @@
+import Link from "next/link";
+
 export default function Nav() {
     return (
         <div className="nav">
             <div className="nav-item">
-                <a href="/">Home</a>
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
             </div>
             <div className="nav-item">
-                <a href="/about">About</a>
+                <Link href="/about">
+                    <a>About</a>
+                </Link>
             </div>
             <div className="nav-item">
-                <a href="/social">Social</a>
+                <Link href="/social">
+                    <a>Social</a>
+                </Link>
             </div>
         </div>
     );
