@@ -3,18 +3,22 @@ export default function Grid({ items }) {
 
     let gridItems = [];
     let tempGrid = [];
-    let index = 0;
+    let index = 1;
     items.forEach((item) => {
         if (index < gridMaxItems) {
             tempGrid.push(item);
             index++;
         } else {
+            tempGrid.push(item);
             gridItems.push(tempGrid);
             tempGrid = [];
-            tempGrid.push(item);
-            index = 0;
+            index = 1;
         }
     });
+
+    console.log(gridItems);
+    console.log('----')
+    console.log(tempGrid);
 
     if (
         (tempGrid.length > 0 && tempGrid.length < gridMaxItems) ||
@@ -49,11 +53,12 @@ export default function Grid({ items }) {
                                     <p>{item.content}</p>
                                     <div className="project-links">
                                         {item.links
-                                            ? item.links.map((link, index) => {
+                                            ? item.links.map((link, _index) => {
                                                   return (
                                                       <a
                                                           href={link.url}
                                                           className="project-link"
+                                                          key={_index}
                                                       >
                                                           {link.label}
                                                       </a>
