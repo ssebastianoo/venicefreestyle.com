@@ -13,8 +13,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-console.log(db);
-
 /* items
     .map((item) => {
         item.tags = item.content
