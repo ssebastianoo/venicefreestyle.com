@@ -46,9 +46,19 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 890px) {
         .grid {
             grid-template-columns: repeat(2, 40vw);
+
+            .grid-item {
+                h3 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
 
             .grid-item-1 {
                 grid-column: 1 / 3;
@@ -61,6 +71,18 @@
 
             .grid-item-3 {
                 grid-column: unset;
+            }
+        }
+    }
+
+    @media (max-width: 260px) {
+        .grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .grid-item {
+                width: 80vw;
             }
         }
     }

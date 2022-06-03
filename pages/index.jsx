@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Grid from "../components/Grid";
 import Head from "next/head";
 
@@ -188,7 +187,6 @@ export default function Home() {
             <Head>
                 <title>VFL</title>
             </Head>
-            <Header />
             <Grid items={items} />
         </div>
     );
