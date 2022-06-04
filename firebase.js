@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyARyXonoH-SGkDWyuQPpaNqwFq3pb_m9fw',
+    apiKey: process.env.FIREBASE_KEY,
     authDomain: "venicefreestylelab-4289d.firebaseapp.com",
     projectId: "venicefreestylelab-4289d",
     storageBucket: "venicefreestylelab-4289d.appspot.com",
