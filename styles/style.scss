@@ -1,6 +1,8 @@
 @use "_grid";
 @use "_social";
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 html,
 body {
     margin: 0;
@@ -8,6 +10,7 @@ body {
 }
 
 body {
+    font-family: 'Josefin Sans', sans-serif;
     background-size: 40px 40px;
     background-image: radial-gradient(
         circle,
@@ -17,16 +20,13 @@ body {
 }
 
 .header {
-    margin: 100px 0;
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    height: 210px;
 
-@media (max-width: 768px) {
-    .header {
-        img {
-            width: 300px !important;
-        }
+    img {
+        height: 150px;
     }
 }
 

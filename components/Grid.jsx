@@ -1,5 +1,7 @@
+import SocialButton from "./SocialButton";
+
 export default function Grid({ items }) {
-    const gridMaxItems = 6;
+    const gridMaxItems = 13;
 
     let gridItems = [];
     let tempGrid = [];
@@ -38,29 +40,35 @@ export default function Grid({ items }) {
                                     }
                                     key={index}
                                     style={{
-                                        backgroundImage: `linear-gradient(
-                                            to bottom,
-                                            rgba(0, 0, 0, 0.7) 0%,
-                                            rgba(0, 0, 0, 0.7) 100%
-                                        ), url("${item.background}")`,
+                                        backgroundImage: `url("${item.background}"`,
                                     }}
                                 >
-                                    <h3>{item.title}</h3>
-                                    <p>{item.content}</p>
-                                    <div className="project-links">
-                                        {item.links
-                                            ? item.links.map((link, _index) => {
-                                                  return (
-                                                      <a
-                                                          href={link.url}
-                                                          className="project-link"
-                                                          key={_index}
-                                                      >
-                                                          {link.label}
-                                                      </a>
-                                                  );
-                                              })
-                                            : null}
+                                    <div className={"grid-item-content " + ([3,5,7,10,11].includes(index+1) ? 'horizontal' : 'vertical')}>
+                                        <h3>{index+1}_{item.title}</h3>
+                                        <p>{item.content}</p>
+                                        <div className="project-links">
+                                            {item.links
+                                                ? item.links.map(
+                                                      (link, _index) => {
+                                                          return (
+                                                              <a
+                                                                  href={
+                                                                      link.url
+                                                                  }
+                                                                  className="project-link"
+                                                                  key={_index}
+                                                              >
+                                                                  <SocialButton
+                                                                      url={
+                                                                          link.url
+                                                                      }
+                                                                  />
+                                                              </a>
+                                                          );
+                                                      }
+                                                  )
+                                                : null}
+                                        </div>
                                     </div>
                                 </div>
                             );

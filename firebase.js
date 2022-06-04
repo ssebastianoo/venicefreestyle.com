@@ -13,21 +13,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-/* items
-    .map((item) => {
-        item.tags = item.content
-            .split(" ")
-            .map((word) => {
-                if (word.startsWith("#")) {
-                    return word.replace("#", "").toLowerCase();
-                }
-            })
-            .filter((tag) => tag != undefined);
-        item.content = item.content.split(" ").filter(word => !word.startsWith("#")).join(" ").replace("Tag:", "").trim();
-        return item;
-    })
-    .forEach(async (item, index) => {
-        await setDoc(doc(db, "projects", index.toString()), item);
-    }); */
+import items from "./items";
+
+items.forEach(async (item, index) => {
+    await setDoc(doc(db, "projects", index.toString()), item);
+});
 
 export { db };
