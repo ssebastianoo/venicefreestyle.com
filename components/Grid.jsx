@@ -1,4 +1,5 @@
 import SocialButton from "./SocialButton";
+import Project from "./Project";
 
 export default function Grid({ items }) {
     const gridMaxItems = 13;
@@ -31,47 +32,7 @@ export default function Grid({ items }) {
                 return (
                     <div className="grid" key={index_}>
                         {grid.map((item, index) => {
-                            return (
-                                <div
-                                    className={
-                                        "grid-item" +
-                                        " grid-item-" +
-                                        (index + 1)
-                                    }
-                                    key={index}
-                                    style={{
-                                        backgroundImage: `url("${item.background}"`,
-                                    }}
-                                >
-                                    <div className={"grid-item-content " + ([3,5,7,10,11].includes(index+1) ? 'horizontal' : 'vertical')}>
-                                        <h3>{index+1}_{item.title}</h3>
-                                        <p>{item.content}</p>
-                                        <div className="project-links">
-                                            {item.links
-                                                ? item.links.map(
-                                                      (link, _index) => {
-                                                          return (
-                                                              <a
-                                                                  href={
-                                                                      link.url
-                                                                  }
-                                                                  className="project-link"
-                                                                  key={_index}
-                                                              >
-                                                                  <SocialButton
-                                                                      url={
-                                                                          link.url
-                                                                      }
-                                                                  />
-                                                              </a>
-                                                          );
-                                                      }
-                                                  )
-                                                : null}
-                                        </div>
-                                    </div>
-                                </div>
-                            );
+                            return <Project project={item} index={index} key={index} />
                         })}
                     </div>
                 );

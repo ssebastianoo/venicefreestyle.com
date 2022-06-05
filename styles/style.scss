@@ -32,17 +32,17 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    height: 80px;
 
-    .nav-item {
+    div {
+        display: flex;
+        align-items: center;
+
         a {
-            text-decoration: none;
-            color: unset;
-
-            &:hover {
-                text-decoration: underline;
-            }
+            margin-left: 20px;
         }
     }
 }
