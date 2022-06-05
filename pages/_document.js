@@ -26,6 +26,7 @@ aggregazione.`;
                 <meta name="author" content="F.I.Ve. SRL" />
                 <meta property="og:title" content="VFL" />
                 <meta property="og:description" content={description} />
+                <meta name="twitter:card" content="summary_large_image"></meta>
                 <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/logos%2Flogo-white.png?alt=media&token=30d9e716-1656-4352-a5bf-a8e85e16f73d" />
             </Head>
             <body>
