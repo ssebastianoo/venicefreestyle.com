@@ -1,4 +1,3 @@
-import SocialButton from "./SocialButton";
 import Project from "./Project";
 
 export default function Grid({ items }) {
