@@ -1,5 +1,6 @@
 @use "_grid";
 @use "_social";
+@use "_nav";
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
@@ -30,19 +31,11 @@ body {
     }
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 40px;
-    height: 80px;
-
-    div {
-        display: flex;
-        align-items: center;
-
-        a {
-            margin-left: 20px;
+@media screen and (max-width: 726px) {
+    .header {
+        height: 130px;
+        img {
+            display: none;
         }
     }
 }
