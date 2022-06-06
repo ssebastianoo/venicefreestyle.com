@@ -1,7 +1,7 @@
 import Grid from "../components/Grid";
 import Head from "next/head";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -9,7 +9,8 @@ export default function Home() {
 
     useEffect(() => {
         async function getProjects() {
-            const querySnapshot = await getDocs(collection(db, "projects"));
+            const q = query(collection(db, "projects"), orderBy("id"));
+            const querySnapshot = await getDocs(q);
             const projects = querySnapshot.docs.map((doc) => doc.data());
             setProjects(projects);
         }

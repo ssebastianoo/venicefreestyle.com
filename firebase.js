@@ -13,10 +13,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-import items from "./items";
+/* import items from "./items";
 
 items.forEach(async (item, index) => {
-    await setDoc(doc(db, "projects", index.toString()), item);
-});
+    await setDoc(doc(db, "projects", index.toString()), {...item, id: index});
+}); */
 
 export { db };
