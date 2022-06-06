@@ -16,49 +16,51 @@
             background-size: cover;
             background-position: center;
             border-radius: 15px;
-            box-shadow: 5px 5px 2px rgb(38, 37, 37);
+            box-shadow: 3px 3px 2px rgba(38, 37, 37, 0.7);
             display: flex;
             align-items: flex-end;
             overflow: auto;
-            
-            &:not(:hover) {
-                .grid-item-content {
-                    display: none;
+            transition-duration: 0.3s;
+
+            .grid-item-content {
+                opacity: 0;
+                transition-duration: 0.3s;
+                overflow: auto;
+                padding: 10px;
+                white-space: pre-wrap;
+                background-color: RGBA(255, 255, 255, 0.8);
+
+                .project-links {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                h3 {
+                    font-size: 10px;
+                }
+
+                p {
+                    margin-top: 0;
+                    font-size: 8px;
                 }
             }
 
+            .vertical {
+                width: 100%;
+            }
+
+            .horizontal {
+                height: 100%;
+                max-width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
             &:hover {
+                background-size: 200%;
                 .grid-item-content {
-                    overflow: auto;
-                    padding: 10px;
-                    white-space: pre-wrap;
-                    background-color: RGBA(255,255,255,0.8);
-    
-                    .project-links {
-                        display: flex;
-                        gap: 10px;
-                    }
-    
-                    h3 {
-                        font-size: 10px;
-                    }
-    
-                    p {
-                        margin-top: 0;
-                        font-size: 8px;
-                    }
-                }
-
-                .vertical {
-                    width: 100%;
-                }
-
-                .horizontal {
-                    height: 100%;
-                    max-width: 60%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
+                    opacity: 1;
                 }
             }
         }

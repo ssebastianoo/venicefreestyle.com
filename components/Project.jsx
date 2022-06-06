@@ -11,6 +11,7 @@ export default function Project({ project, index }) {
             key={index}
             style={{
                 backgroundImage: `url("${project.background}"`,
+                transitionDuration: "0.5s",
             }}
         >
             <div

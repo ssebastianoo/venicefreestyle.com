@@ -20,14 +20,14 @@ export default function Nav() {
             </div>
             <div className="right">
                 <p>Contact us</p>
-                <a href="#">
+                <a href="https://t.me/vflcrew">
                     <Image src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Ftelegram.png?alt=media&token=b66d59a5-f17b-4607-a235-fc5bf790b0df" width="40" height="40" />
                 </a>
                 <a href="#">
                     <Image src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Fmessenger.png?alt=media&token=a05689ca-4c0a-403a-bae6-0e72ff232ad3" width="40" height="40" />
                 </a>
-                <a href="#">
-                    <Image src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Fwebsite.png?alt=media&token=74048865-ead7-4138-8f7a-02023e992df4" width="40" height="40" />
+                <a href="mailto:info@venicefreestyle.com">
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Fmail.png?alt=media&token=f764e178-ff8b-49fd-a6f2-2faf3739a344" width="40" height="40" />
                 </a>
             </div>
         </div>
