@@ -25,7 +25,7 @@ export default function Project({ project, index }) {
                 }
             >
                 <h3>
-                    {index + 1}_{project.title}
+                    {project.title}
                 </h3>
                 <p>{project.content}</p>
                 <div className="project-links">
