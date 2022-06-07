@@ -49,7 +49,7 @@ export default function Nav() {
                     />
                 </a>
             </div>
-            <div className="section mobile">
+            <div className="section mobile top">
                 <div className="logo">
                     <img
                         src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/logos%2Flogo-white.png?alt=media&token=30d9e716-1656-4352-a5bf-a8e85e16f73d"
@@ -75,7 +75,7 @@ export default function Nav() {
                     />
                 </a>
             </div>
-            <div className="section mobile">
+            <div className="section mobile bottom">
                 <a href="https://www.facebook.com/venicefreestylelab/">
                     <img
                         src="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Ffacebook_minimal.png?alt=media&token=18ed5add-9233-454c-a3d9-a95857421e43"

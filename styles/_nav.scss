@@ -25,16 +25,13 @@
 
 @media screen and (max-width: 726px) {
     .nav {
-        top: 0;
-        position: fixed;
-        margin: 0;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-        z-index: 999;
 
         .desktop {
             display: none;
+        }
+
+        .bottom {
+            bottom: 0;
         }
 
         .mobile {
@@ -42,6 +39,8 @@
             align-items: center;
             justify-content: space-around;
             width: 100vw;
+            position: fixed;
+            left: 0;
             background-color: white;
             box-shadow: 3px 3px 10px black;
             height: 80px;
