@@ -15,7 +15,7 @@ per sviluppare nuovi paesaggi, urbani e naturali, dedicati ad
 accogliere queste discipline e porsi come nuovi luoghi di
 aggregazione.`;
 
-    const keywords = ['Venice Freestyle Lab', 'Venice Freestyle', 'VFL', 'freestyle', 'skateboard', 'surf', 'bmx', 'parkour', 'snowboard', 'sci freestyle', 'sci', 'ski', 'ski freestyle', 'events', 'eventi', 'video', 'social network'];
+    const keywords = ['Venice Freestyle Lab', 'Venice Freestyle', 'VFL', 'sport', 'freestyle', 'skateboard', 'surf', 'bmx', 'parkour', 'snowboard', 'sci freestyle', 'sci', 'ski', 'ski freestyle', 'events', 'eventi', 'video', 'social network'];
 
     return (
         <Html>
