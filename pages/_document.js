@@ -14,20 +14,24 @@ articolati fra dimostrazioni e workshop didattici. PROGETTARE:
 per sviluppare nuovi paesaggi, urbani e naturali, dedicati ad
 accogliere queste discipline e porsi come nuovi luoghi di
 aggregazione.`;
+
+    const keywords = ['Venice Freestyle Lab', 'Venice Freestyle', 'VFL', 'freestyle', 'skateboard', 'surf', 'bmx', 'parkour', 'snowboard', 'sci freestyle', 'sci', 'ski', 'ski freestyle', 'events', 'eventi', 'video', 'social network'];
+
     return (
         <Html>
             <Head>
                 <link rel="icon" href="./assets/loghi/logo-white.ico" />
-                <meta
-                    name="description"
-                    content={description}
-                />
+                <meta name="description" content={description} />
                 <meta name="theme-color" content="#ffffff" />
                 <meta name="author" content="F.I.Ve. SRL" />
                 <meta property="og:title" content="VFL" />
                 <meta property="og:description" content={description} />
                 <meta name="twitter:card" content="summary_large_image"></meta>
-                <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/logos%2Flogo-white.png?alt=media&token=30d9e716-1656-4352-a5bf-a8e85e16f73d" />
+                <meta
+                    property="og:image"
+                    content="https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/logos%2Flogo-white.png?alt=media&token=30d9e716-1656-4352-a5bf-a8e85e16f73d"
+                />
+                <meta property="keywords" content={keywords.join(", ")} />
             </Head>
             <body>
                 <Main />
