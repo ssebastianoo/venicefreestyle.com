@@ -13,5 +13,5 @@ export default function SocialButton({ url }) {
         img = 'https://firebasestorage.googleapis.com/v0/b/venicefreestylelab-4289d.appspot.com/o/buttons%2Fwebsite.png?alt=media&token=f5b44498-c195-4f7d-835e-f26304f6d1ee';
     }
 
-    return <Image src={img} width={20} height={20} className="social-button" />;
+    return <Image src={img} width={20} height={20} className="social-button" alt="Social" />;
 }

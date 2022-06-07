@@ -45,7 +45,7 @@ export default function Project({ project, index }) {
                 </div>
             ) : (
                 <div className="loading">
-                    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                     <img style={{display: 'none'}} src={project.background} onLoad={() => setImgLoaded(true)} />
                 </div>
             )}
