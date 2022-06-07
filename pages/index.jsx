@@ -13,6 +13,7 @@ export default function Home() {
             const querySnapshot = await getDocs(q);
             const projects = querySnapshot.docs.map((doc) => doc.data());
             setProjects(projects);
+            console.log(projects);
         }
         getProjects();
     }, []);
