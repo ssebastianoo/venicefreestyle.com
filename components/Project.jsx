@@ -1,5 +1,5 @@
 import SocialButton from "./SocialButton";
-
+import ReactMarkdown from "react-markdown";
 import { useState } from "react";
 
 export default function Project({ project, index }) {
@@ -25,7 +25,9 @@ export default function Project({ project, index }) {
                         }
                     >
                         <h3>{project.title}</h3>
-                        <p>{project.content}</p>
+                        <p>
+                            <ReactMarkdown>{project.content}</ReactMarkdown>
+                        </p>
                         <div className="project-links">
                             {project.links
                                 ? project.links.map((link, _index) => {
@@ -45,8 +47,26 @@ export default function Project({ project, index }) {
                 </div>
             ) : (
                 <div className="loading">
-                    <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <img style={{display: 'none'}} src={project.background} onLoad={() => setImgLoaded(true)} />
+                    <div className="lds-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <img
+                        style={{ display: "none" }}
+                        src={project.background}
+                        onLoad={() => setImgLoaded(true)}
+                        alt="Loading"
+                    />
                 </div>
             )}
         </>
