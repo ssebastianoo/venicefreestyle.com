@@ -14,7 +14,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 /* import items from './projects.json';
-
+// a comment just to force vercel to re-build
 items.forEach(async (item, index) => {
     await setDoc(doc(db, "projects", index.toString()), {...item, id: index});
 }); */
