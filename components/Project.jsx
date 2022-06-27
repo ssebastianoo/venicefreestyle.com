@@ -25,9 +25,7 @@ export default function Project({ project, index }) {
                         }
                     >
                         <h3>{project.title}</h3>
-                        <p>
-                            <ReactMarkdown>{project.content}</ReactMarkdown>
-                        </p>
+                        <ReactMarkdown>{project.content}</ReactMarkdown>
                         <div className="project-links">
                             {project.links
                                 ? project.links.map((link, _index) => {
